@@ -126,20 +126,20 @@ Build a portfolio of hands-on networking projects
 
 ## CCNA Progress
 
-[1] Basic networking concepts
-[2] Ethernet and MAC addresses
-[3] ARP
-[4] Basic switching
-[5] VLANs
-[6] Trunking
-[7] Inter-VLAN routing
-[8] Static routing
-[9] Dynamic routing
-[10] DHCP
-[11] NAT
-[12] ACLs
-[13] Network security
-[14] Troubleshooting
+1. Basic networking concept
+2. Ethernet and MAC addresses
+3. RP
+4. Basic switching
+5. VLANs
+6. Trunking
+7. Inter-VLAN routing
+8. Static routing
+9. Dynamic routing
+10. DHCP
+11. NAT
+12. ACLs
+13. Network security
+14. Troubleshooting
 
 This checklist will be updated as I progress through my CCNA studies.
 
