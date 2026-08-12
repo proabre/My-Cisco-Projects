@@ -1,10 +1,10 @@
-## CCNA Networking Projects
+# CCNA Networking Projects
 
 A collection of Cisco Packet Tracer networking projects created while studying for the Cisco Certified Network Associate (CCNA) certification.
 
 This repository documents my hands-on practice with networking concepts, Cisco devices, configuration, troubleshooting, and network communication.
 
-# Topics Covered
+## Topics Covered
 
 Basic LAN configuration
 
@@ -40,7 +40,7 @@ Cisco IOS configuration
 
 Client-to-server communication
 
-# Repository Structure
+## Repository Structure
 
 cisco-projects/
 │
@@ -108,7 +108,7 @@ show arp
 ping
 traceroute
 
-# Goals
+## Goals
 
 The main goals of this repository are to:
 
@@ -124,7 +124,7 @@ Document my networking progress
 
 Build a portfolio of hands-on networking projects
 
-# CCNA Progress
+## CCNA Progress
 
 [1] Basic networking concepts
 [2] Ethernet and MAC addresses
@@ -143,7 +143,7 @@ Build a portfolio of hands-on networking projects
 
 This checklist will be updated as I progress through my CCNA studies.
 
-# About
+## About
 
 This repository represents my hands-on journey toward CCNA-level networking knowledge, with each project providing practical experience with Cisco networking technologies.
 
