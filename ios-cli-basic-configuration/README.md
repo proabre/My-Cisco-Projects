@@ -1,5 +1,5 @@
-README — Cisco IOS CLI Basic Configuration Lab
-Overview
+# Cisco IOS CLI Basic Configuration Lab
+## Overview
 
 This lab introduces the Cisco IOS Command-Line Interface (CLI) using Cisco Packet Tracer.
 
@@ -18,7 +18,7 @@ Using command shortcuts and do
 
 Practice recommendation: Complete the same configuration steps on both R1 and SW1 to build familiarity with Cisco IOS commands.
 
-Lab Topology
+## Lab Topology
 
 The lab contains:
 
@@ -28,11 +28,11 @@ Several PCs
 
 The configurations demonstrated in the lab are primarily performed on R1, but the same concepts should be practiced on SW1.
 
-Cisco IOS CLI Modes
+## Cisco IOS CLI Modes
 
 Cisco IOS uses different command modes.
 
-User EXEC Mode
+###User EXEC Mode
 
 Prompt:
 
@@ -40,7 +40,7 @@ Router>
 
 This is the initial mode after accessing the device.
 
-Privileged EXEC Mode
+## Privileged EXEC Mode
 
 Prompt:
 
@@ -53,7 +53,7 @@ enable
 Shortcut:
 
 en
-Global Configuration Mode
+## Global Configuration Mode
 
 Prompt:
 
@@ -66,7 +66,7 @@ configure terminal
 Shortcut:
 
 conf t
-Mode Navigation
+## Mode Navigation
 Router> enable
 Router# configure terminal
 Router(config)#
@@ -74,7 +74,8 @@ Router(config)#
 To return to the previous mode:
 
 exit
-Step 1 — Configure Hostnames
+
+## Step 1 — Configure Hostnames
 
 The default hostname is usually:
 
@@ -95,7 +96,7 @@ Configure SW1 similarly:
 enable
 configure terminal
 hostname SW1
-Step 2 — Configure the Enable Password
+## Step 2 — Configure the Enable Password
 
 The enable password command protects access to privileged EXEC mode.
 
@@ -104,9 +105,9 @@ From global configuration mode:
 enable password CCNA
 
 The configured password is:
-
 CCNA
-Step 3 — Test the Enable Password
+
+## Step 3 — Test the Enable Password
 
 Return to user EXEC mode:
 
@@ -133,7 +134,7 @@ R1#
 
 Incorrect passwords will result in an authentication failure.
 
-Step 4 — View the Running Configuration
+## Step 4 — View the Running Configuration
 
 The running configuration contains the configuration currently active on the device.
 
@@ -152,13 +153,13 @@ R1# show running-config
 You should initially see the enable password in clear text:
 
 enable password CCNA
-Important
+### Important
 
 The running configuration is stored in RAM.
 
 If you make changes and restart the device without saving them, those changes can be lost.
 
-Step 5 — Enable Password Encryption
+## Step 5 — Enable Password Encryption
 
 From global configuration mode:
 
@@ -167,7 +168,7 @@ service password-encryption
 
 This enables encryption for passwords that would otherwise appear in clear text in the configuration.
 
-Step 6 — Verify Password Encryption
+## Step 6 — Verify Password Encryption
 
 You can return to privileged EXEC mode:
 
@@ -187,11 +188,11 @@ enable password 7 <encrypted-string>
 
 The 7 indicates Cisco Type 7 password obfuscation.
 
-Important
+### Important
 
 Type 7 is not considered strong encryption. It mainly prevents someone from immediately reading the password in the configuration.
 
-Step 7 — Configure an Enable Secret
+## Step 7 — Configure an Enable Secret
 
 A more secure method is to configure an enable secret.
 
@@ -205,7 +206,7 @@ Cisco
 
 The enable secret takes precedence over the enable password.
 
-Step 8 — Test the Enable Secret
+## Step 8 — Test the Enable Secret
 
 Return to user EXEC mode:
 
@@ -228,7 +229,7 @@ Cisco
 
 You should successfully enter privileged EXEC mode.
 
-Key Rule
+### Key Rule
 
 If both are configured:
 
@@ -237,7 +238,7 @@ enable secret Cisco
 
 The enable secret is used for privileged EXEC authentication.
 
-Step 9 — View the Passwords
+## Step 9 — View the Passwords
 
 Use:
 
@@ -256,27 +257,26 @@ Type 5	enable secret 5 ...	MD5-based secret format
 
 Modern Cisco IOS versions may support newer password-hashing mechanisms. The exact format depends on the IOS version and configuration.
 
-Step 10 — Save the Configuration
+## Step 10 — Save the Configuration
 
 The running configuration must be copied to the startup configuration if you want it to survive a reboot.
 
 There are three common commands:
 
-Method 1
+### Method 1
 write
-Method 2
+### Method 2
 write memory
 
 Shortcut:
-
 wr
-Method 3
+### Method 3
 copy running-config startup-config
 
 The third method explicitly copies:
 
 running-config → startup-config
-Verify the Startup Configuration
+## Verify the Startup Configuration
 
 Use:
 
@@ -284,9 +284,9 @@ show startup-config
 
 The saved configuration should contain the settings that were copied from the running configuration.
 
-Important Commands
-Command	Purpose
-enable	Enter privileged EXEC mode
+## Important Commands
+## Command	Purpose
+enable	          Enter privileged EXEC mode
 configure terminal	Enter global configuration mode
 hostname R1	Change device hostname
 enable password CCNA	Configure an enable password
@@ -298,7 +298,8 @@ do show running-config	Run an EXEC command from configuration mode
 write	Save configuration
 write memory	Save configuration
 copy running-config startup-config	Save running configuration
-Useful CLI Shortcuts
+
+## Useful CLI Shortcuts
 
 Cisco IOS allows abbreviated commands when the abbreviation is unambiguous.
 
@@ -325,7 +326,7 @@ sh run
 can be used for:
 
 show running-config
-Ambiguous Commands
+## Ambiguous Commands
 
 A command must be abbreviated enough to uniquely identify it.
 
@@ -365,7 +366,7 @@ R1# en<Tab>
 becomes:
 
 R1# enable
-Running Configuration vs Startup Configuration
+## Running Configuration vs Startup Configuration
 
 This is an important CCNA concept.
 
@@ -385,7 +386,7 @@ Startup-config
 
 If you configure a device but do not save the configuration, a reboot can cause the unsaved changes to disappear.
 
-Complete Configuration Example
+## Complete Configuration Example
 
 A basic R1 configuration from this lab would look like:
 
@@ -400,7 +401,8 @@ exit
 show running-config
 copy running-config startup-config
 show startup-config
-Key CCNA Takeaways
+
+## Key CCNA Takeaways
 User EXEC mode uses >.
 Privileged EXEC mode uses #.
 enable enters privileged EXEC mode.
