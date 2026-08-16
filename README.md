@@ -64,7 +64,7 @@ cisco-projects/
 
 Each project contains its own Packet Tracer topology and README explaining the network, configuration, and concepts demonstrated.
 
-Tools
+## Tools
 
 Cisco Packet Tracer
 
@@ -74,11 +74,11 @@ Git
 
 GitHub
 
-Learning Approach
+## Learning Approach
 
 Each project focuses on a specific networking concept. I build the topology, configure the devices, test connectivity, and troubleshoot any problems encountered.
 
-Typical workflow:
+## Typical workflow:
 
 Build Topology
       ↓
