@@ -45,7 +45,7 @@ This is because Cisco router interfaces are disabled by default.
 If you are in configuration mode, you can use:
 
 R1(config)# do show ip interface brief
-## 3. Configure R1's interfaces
+3. Configure R1's interfaces
 GigabitEthernet 0/0
 R1(config)# interface g0/0
 R1(config-if)# ip address 15.255.255.254 255.0.0.0
@@ -118,9 +118,9 @@ R1# write
 The difference is:
 
 running-config
-      ↓
-    save
-      ↓
+↓
+save
+↓
 startup-config
 
 The running configuration is currently active. The startup configuration is loaded when the router reboots.
@@ -169,21 +169,21 @@ hostname R1
 
 
 interface g0/0
- ip address 15.255.255.254 255.0.0.0
- description ## to SW1 ##
- no shutdown
+ip address 15.255.255.254 255.0.0.0
+description ## to SW1 ##
+no shutdown
 
 
 interface g0/1
- ip address 182.98.255.254 255.255.0.0
- description ## to SW2 ##
- no shutdown
+ip address 182.98.255.254 255.255.0.0
+description ## to SW2 ##
+no shutdown
 
 
 interface g0/2
- ip address 201.191.20.254 255.255.255.0
- description ## to SW3 ##
- no shutdown
+ip address 201.191.20.254 255.255.255.0
+description ## to SW3 ##
+no shutdown
 
 end
 
