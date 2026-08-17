@@ -45,7 +45,7 @@ This is because Cisco router interfaces are disabled by default.
 If you are in configuration mode, you can use:
 
 R1(config)# do show ip interface brief
-3. Configure R1's interfaces
+# 3. Configure R1's interfaces
 GigabitEthernet 0/0
 R1(config)# interface g0/0
 R1(config-if)# ip address 15.255.255.254 255.0.0.0
