@@ -3,11 +3,11 @@
 
 This lab demonstrates the basic configuration of a Cisco router, two switches, and four PCs connected to a single LAN.
 
-The LAN uses the network:
+## The LAN uses the network:
 
 172.16.0.0/16
 
-The lab focuses on:
+## The lab focuses on:
 
 Configuring hostnames
 Configuring IP addresses
@@ -27,7 +27,7 @@ PC4	End host	172.16.0.4/16
 
 Default gateway for all PCs: 172.16.255.254
 
-R1 Configuration
+## R1 Configuration
 enable
 configure terminal
 
@@ -51,7 +51,8 @@ end
 
 
 copy running-config startup-config
-SW1 Configuration
+
+## SW1 Configuration
 enable
 configure terminal
 
@@ -79,12 +80,11 @@ interface range f0/3 - 24
 description ## not in use ##
 shutdown
 
-
 end
 
-
 write memory
-SW2 Configuration
+
+## SW2 Configuration
 enable
 configure terminal
 
@@ -111,46 +111,51 @@ end
 
 
 write
-PC Configuration
 
-Configure the following addresses on the PCs:
+## PC Configuration
+
+### Configure the following addresses on the PCs:
 
 PC1: 172.16.0.1 /16
 PC2: 172.16.0.2 /16
 PC3: 172.16.0.3 /16
 PC4: 172.16.0.4 /16
 
-Subnet mask:
+### Subnet mask:
 
 255.255.0.0
 
-Default gateway:
+### Default gateway:
 
 172.16.255.254
-Verification Commands
-Router
+
+### Verification Commands
+### Router
 show ip interface brief
 show running-config
 show startup-config
-Switches
+
+### Switches
 show interfaces status
 show running-config
 show startup-config
 
 These commands verify interface status, IP addressing, speed, duplex, descriptions, and saved configuration.
 
-Important Concepts
-Router Interfaces
+## Important Concepts
 
+### Router Interfaces
 Router interfaces are administratively down by default. An active interface therefore requires:
 
 no shutdown
-Switch Interfaces
+
+### Switch Interfaces
 
 Switch ports are normally enabled by default. Unused ports should be disabled:
 
 shutdown
-Speed and Duplex
+
+## Speed and Duplex
 
 The lab manually configures connected GigabitEthernet interfaces:
 
@@ -159,7 +164,7 @@ duplex full
 
 Both ends of a connection should have compatible settings.
 
-Running vs Startup Configuration
+### Running vs Startup Configuration
 Running-config: Configuration currently active in RAM.
 Startup-config: Configuration saved in NVRAM and loaded after a reboot.
 
@@ -174,11 +179,11 @@ write memory
 or:
 
 write
-Packet Tracer Note
+## Packet Tracer Note
 
 Packet Tracer may display manually configured interfaces as a-1000 and a-full in some output, even though the speed and duplex were manually configured. This behavior can differ from a physical Cisco device.
 
-Learning Objectives
+## Learning Objectives
 
 After completing this lab, you should be able to:
 
