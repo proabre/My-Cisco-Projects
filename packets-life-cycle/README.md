@@ -153,29 +153,15 @@ Destination IP: PC1 = 192.168.1.1
 
 The MAC addresses change at every router hop.
 
-PC4 → PC1
-Segment	Source MAC	Destination MAC
-PC4 → SW2	PC4 = 4444	R3 G0/1 = FFFF
-SW2 → R3	PC4 = 4444	R3 G0/1 = FFFF
-R3 → R2	R3 G0/0 = EEEE	R2 G0/1 = DDDD
-R2 → R1	R2 G0/0 = CCCC	R1 G0/1 = BBBB
-R1 → SW1	R1 G0/0 = AAAA	PC1 = 1111
-SW1 → PC1	R1 G0/0 = AAAA	PC1 = 1111
-Easy way to remember it
+| Segment       | Source MAC       | Destination MAC  |
+| ------------- | ---------------- | ---------------- |
+| **PC4 → SW2** | PC4 (`4444`)     | R3 G0/1 (`FFFF`) |
+| **SW2 → R3**  | PC4 (`4444`)     | R3 G0/1 (`FFFF`) |
+| **R3 → R2**   | R3 G0/0 (`EEEE`) | R2 G0/1 (`DDDD`) |
+| **R2 → R1**   | R2 G0/0 (`CCCC`) | R1 G0/1 (`BBBB`) |
+| **R1 → SW1**  | R1 G0/0 (`AAAA`) | PC1 (`1111`)     |
+| **SW1 → PC1** | R1 G0/0 (`AAAA`) | PC1 (`1111`)     |
 
-PC1 → PC4 was:
-
-1111 → AAAA
-BBBB → CCCC
-DDDD → EEEE
-FFFF → 4444
-
-PC4 → PC1 reverses the direction:
-
-4444 → FFFF
-EEEE → DDDD
-CCCC → BBBB
-AAAA → 1111
 
 The IP addresses stay end-to-end as:
 
